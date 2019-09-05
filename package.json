@@ -4,7 +4,8 @@
   "description": "node bindings for the v8 profiler",
   "main": "dispatch.js",
   "scripts": {
-    "test": "mocha test/*.test.js --timeout 5000"
+    "install": "node-pre-gyp install --fallback-to-build",
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
