@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hyj1991/v8-profiler-next.git"
+    "url": "git+https://github.com/Jooraz/v8-profiler-next.git"
   },
   "keywords": [
     "node",
@@ -28,10 +28,19 @@
     "README.md"
   ],
   "dependencies": {
-    "nan": "^2.14.0"
+    "nan": "^2.14.0",
+    "node-pre-gyp": "^0.13.0",
+    "node-pre-gyp-github": "^1.4.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
+  },
+  "binary": {
+    "module_name": "profiler",
+    "module_path": "./build/Release/",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}-{libc}.tar.gz",
+    "host": "https://github.com/Jooraz/v8-profiler-next/releases/download/",
+    "remote_path": "v{version}"
   }
 }
